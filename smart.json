@@ -1,0 +1,9 @@
+{
+	"name": "greenlight profile",
+	"description": "Greenlight profile site template",
+	"homepage": "https://github.com/cfriel/greenlight-profile",
+	"author": "cfriel",
+	"version": "0.1.0",
+	"git": "https://github.com/cfriel/greenlight-profile.git",
+	"packages": {}
+}

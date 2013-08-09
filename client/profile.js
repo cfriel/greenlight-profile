@@ -3,7 +3,7 @@ var version = "1.0";
 
 profile = function(){};
 
-profile.prototype = new profile();
+profile.prototype = new Greenlight.Package();
 
 profile.prototype.routes =   {
     

@@ -5,7 +5,7 @@ Template.profile_page_public.username = function()
     return username;
 }
 
-Template.profile_page_public.name = function()
+Template.profile_page_public.fullname = function()
 {
     var username = Session.get("profile_username");
 

@@ -24,9 +24,36 @@ Template.profile_page.username = function()
     }
 }
 
+Template.profile_page.username = function()
+{
+    try
+    {
+	return Meteor.user().username;
+    }
+    catch(ex)
+    {
+    }
+}
+
 Template.profile_page.userId = function()
 {
-    return Meteor.userId();
+    if(Meteor.userId())
+    {
+	return Meteor.userId();
+    }
+}
+
+Template.profile_page.fullname = function()
+{
+    if(Meteor.userId())
+    {
+	var user = Meteor.users.findOne({ _id : Meteor.userId()});
+
+	if(user)
+	{
+	    return user.profile.name;
+	}
+    }
 }
 
 Meteor.saveFile = function(blob, name, path, type, callback) {

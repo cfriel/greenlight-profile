@@ -1,4 +1,5 @@
 <template name="profile_page">
+
   <div class="col-lg-3">
     <img class="profile-image" src="/{{userId}}"/>
     <h1>{{username}}</h1>
@@ -32,5 +33,16 @@
 	
       </fieldset>
     </form>
+    
+    <div class="profile-activities">
+      <ul class="list-group">
+	{{#each activities}}
+	<li class="list-group-item">	
+	  <span class="profile-activity-title">{{title}}</span>
+	  <span class="profile-activity-description">{{description}}</span>
+	</li>
+	{{/each}}
+      </ul>
+    </div>
   </div>
 </template>

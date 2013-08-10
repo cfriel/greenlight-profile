@@ -1,3 +1,19 @@
+Template.profile_page.created = function()
+{
+    var title = "Profile page loaded";
+    var description = "The created event of the profile page was called";
+    var source = "Template.profile_page";
+    var audience = "";
+    var activity = new Greenlight.Activity(title, description, source, audience);
+
+    activity.save();
+}
+
+Template.profile_page.activities = function()
+{
+    return Activities.find();
+}
+
 Template.profile_page.rendered = function()
 { 
     $(document).on('click', '.profile-image', function(){

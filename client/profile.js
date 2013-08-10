@@ -40,7 +40,10 @@ Meteor.subscribe("directory");
 
 Greenlight.Packages.Profile = profile.prototype;
 
-console.log("loading profile package");
+Meteor.startup(function(){
 
-Greenlight.register_template(name, version, Greenlight.Packages.Profile);
+    console.log("loading profile package");
+    
+    Greenlight.register_template(name, version, Greenlight.Packages.Profile);
 
+});

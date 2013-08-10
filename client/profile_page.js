@@ -9,6 +9,23 @@ Template.profile_page.created = function()
     activity.save();
 }
 
+Template.profile_page.sites = function()
+{
+    return Sites.find({owner: Meteor.userId()}).fetch().length;
+}
+
+Template.profile_page.followers = function()
+{
+    // todo
+    return 0;
+}
+
+Template.profile_page.following = function()
+{
+    // todo
+    return 0;
+}
+
 Template.profile_page.activities = function()
 {
     return Activities.find();

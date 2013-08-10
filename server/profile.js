@@ -14,8 +14,6 @@ profile.prototype.metadata = function()
 }();
 
 
-Greenlight.Profile = profile.prototype;
-
 Meteor.methods({
   saveFile: function(blob, name, path, encoding) {
       var path = cleanPath(path);
@@ -50,11 +48,7 @@ Meteor.methods({
   }
 });
 
-Meteor.startup(function () {
-
-    console.log("loading profile package");
+Greenlight.Packages.Profile = profile.prototype;
     
-    Greenlight.register_template(name, version, Greenlight.Profile);    
-
-});
+Greenlight.register_template(name, version, Greenlight.Packages.Profile);    
 

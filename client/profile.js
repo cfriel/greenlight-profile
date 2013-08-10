@@ -38,9 +38,9 @@ profile.prototype.default_route = {
 
 Meteor.subscribe("directory");
 
-Greenlight.Profile = profile.prototype;
+Greenlight.Packages.Profile = profile.prototype;
 
 console.log("loading profile package");
 
-Greenlight.register_template(name, version, Greenlight.Profile);
+Greenlight.register_template(name, version, Greenlight.Packages.Profile);
 

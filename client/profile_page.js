@@ -11,7 +11,7 @@ Template.profile_page.created = function()
 
 Template.profile_page.sites = function()
 {
-    return Sites.find({owner: Meteor.userId()}).fetch().length;
+    return Greenlight.Sites.find({owner: Meteor.userId()}).fetch().length;
 }
 
 Template.profile_page.followers = function()

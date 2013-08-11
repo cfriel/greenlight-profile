@@ -50,5 +50,5 @@ Meteor.methods({
 
 Greenlight.Packages.Profile = profile.prototype;
     
-Greenlight.register_template(name, version, Greenlight.Packages.Profile);    
+Greenlight.register_package(name, version, Greenlight.Packages.Profile);    
 

@@ -44,6 +44,6 @@ Meteor.startup(function(){
 
     console.log("loading profile package");
     
-    Greenlight.register_template(name, version, Greenlight.Packages.Profile);
+    Greenlight.register_package(name, version, Greenlight.Packages.Profile);
 
 });

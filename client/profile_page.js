@@ -28,7 +28,7 @@ Template.profile_page.following = function()
 
 Template.profile_page.activities = function()
 {
-    return Activities.find();
+    return Greenlight.Activities.find();
 }
 
 Template.profile_page.rendered = function()

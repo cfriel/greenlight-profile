@@ -4,7 +4,7 @@ Template.profile_page.created = function()
     var description = "The created event of the profile page was called";
     var source = "Template.profile_page";
     var audience = "";
-    var activity = new Greenlight.Activity(title, description, source, audience);
+    var activity = new Greenlight.Activity({title:title, description:description, source:source, audience:audience});
 
     activity.save();
 }

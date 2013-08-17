@@ -9,14 +9,14 @@ profile.prototype.routes =   {
     
     '/profile': function()
     {
-	console.log("calling /profile route");
+	Greenlight.log("calling /profile route");
 
 	return 'profile_page';
     },
 
     '/users/:username': function(username)
     {
-	console.log("calling /profile/:username route");
+	Greenlight.log("calling /profile/:username route");
 
 	Session.set("profile_username", username);
 
@@ -29,7 +29,7 @@ profile.prototype.default_route = {
 
     '/' : function()
     {
-	console.log("calling default route");
+	Greenlight.log("calling default route");
 
 	return 'profile_page';
     }
@@ -42,7 +42,7 @@ Greenlight.Packages.Profile = profile.prototype;
 
 Meteor.startup(function(){
 
-    console.log("loading profile package");
+    Greenlight.log("loading profile package");
     
     Greenlight.register_package(name, version, Greenlight.Packages.Profile);
 

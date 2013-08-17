@@ -32,7 +32,7 @@ Meteor.methods({
       if (err) {
         throw (new Meteor.Error(500, 'Failed to save file.', err));
       } else {
-        console.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
+        Greenlight.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
       }
     }); 
  

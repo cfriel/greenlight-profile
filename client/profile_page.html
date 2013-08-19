@@ -39,7 +39,43 @@
 	
       </fieldset>
     </form>
-    
+
+    <div id="my-sites">
+      <table class="sites-table table table-hover table-bordered">
+	<thead>
+	  <tr>
+	    <td>Url</td>
+	    <td>Template</td>
+	    <td>Users</td>
+	    <td>Owner</td>
+	  </tr>
+	</thead>
+	<tbody>
+	  {{#each my_sites}}
+	  <tr>
+	    <td>
+	      <a href="/{{url}}">{{url}}</a>
+	    </td>
+	    <td>
+	      {{template}}
+	    </td>
+	    <td class="user-input-td">
+	      <div>
+		<input type="hidden" class="u" style="width: 100%;">
+		{{#each users}}
+		<option value="{{user}}">{{user}}</option>
+		{{/each}}
+                </input>
+	      </div>
+	    </td>
+	    <td>
+	      {{owner}}
+	    </td>
+	  </tr>
+	  {{/each}}
+	</tbody>
+      </table>
+    </div>
     <div class="profile-activities">
       <ul class="list-group">
 	{{#each activities}}

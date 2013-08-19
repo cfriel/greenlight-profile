@@ -1,3 +1,29 @@
+Template.profile_page.my_sites = function () 
+{
+    return Greenlight.Sites.find({ owner: Meteor.userId() }, {sort: {url: 1}});
+};
+
+
+Template.profile_page.owner = function()
+{
+    var self = this;
+    var ownerId = self.owner;
+
+    var owner = Meteor.users.findOne({_id: ownerId});
+    
+    return owner.username;
+};
+
+Template.profile_page.template = function()
+{
+    var self = this;
+    var templateId = self.template;
+
+    var template = Greenlight.Packages.findOne({_id: templateId});
+    
+    return template.name;
+};
+
 Template.profile_page.created = function()
 {
     var title = "Profile page loaded";
@@ -7,7 +33,7 @@ Template.profile_page.created = function()
     var activity = new Greenlight.Activity({title:title, description:description, source:source, audience:audience});
 
     activity.save();
-}
+};
 
 Template.profile_page.sites = function()
 {

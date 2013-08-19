@@ -81,8 +81,8 @@
       <table class="sites-table table table-hover table-bordered">
 	<thead>
 	  <tr>
-	    <td>Owner</td>
 	    <td>Title</td>
+	    <td>Owner</td>
 	    <td>Url</td>
 	  </tr>
 	</thead>
@@ -90,13 +90,13 @@
 	  {{#each my_notifications}}
 	  <tr>
 	    <td>
-	      <a href="{{url}}">{{url}}</a>
-	    </td>
-	    <td>
 	      {{title}}
 	    </td>
 	    <td>
 	      {{owner}}
+	    </td>
+	    <td>
+	      <a href="{{url}}">{{url}}</a>
 	    </td>
 	  </tr>
 	  {{/each}}

@@ -76,6 +76,34 @@
 	</tbody>
       </table>
     </div>
+
+    <div id="my-notifications">
+      <table class="sites-table table table-hover table-bordered">
+	<thead>
+	  <tr>
+	    <td>Owner</td>
+	    <td>Title</td>
+	    <td>Url</td>
+	  </tr>
+	</thead>
+	<tbody>
+	  {{#each my_notifications}}
+	  <tr>
+	    <td>
+	      <a href="{{url}}">{{url}}</a>
+	    </td>
+	    <td>
+	      {{title}}
+	    </td>
+	    <td>
+	      {{owner}}
+	    </td>
+	  </tr>
+	  {{/each}}
+	</tbody>
+      </table>
+    </div>
+
     <div class="profile-activities">
       <ul class="list-group">
 	{{#each activities}}

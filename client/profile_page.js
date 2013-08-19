@@ -3,6 +3,10 @@ Template.profile_page.my_sites = function ()
     return Greenlight.Sites.find({ owner: Meteor.userId() }, {sort: {url: 1}});
 };
 
+Template.profile_page.my_notifications = function () 
+{
+    return Greenlight.Notifications.find({ audience: {$in: [Meteor.userId()]} }, {sort: {url: 1}});
+};
 
 Template.profile_page.owner = function()
 {

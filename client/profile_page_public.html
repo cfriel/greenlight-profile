@@ -1,7 +1,20 @@
 <template name="profile_page_public">
   <div class="col-lg-3">
     <img class="profile-image" src="/{{userId}}" onerror="this.onerror=null;this.src='/default-user.jpg'" />
-    <h1>{{username}}</h1>
+    <h1>@{{username}}</h1>
+    <div>
+      <span class="profile-user-sites">{{sites}} sites</span>
+      <span class="profile-user-followers">{{followers}} followers</span>
+      <span class="profile-user-following">{{following}} following</span>
+    </div>
+    <div>
+      <div class="follow-container">
+	<button id="follow-button" class="btn btn-primary" type="button">
+	  <i class="icon-ok icon-white"/>
+	  <span>Follow</span>
+	</button>  
+      </div>
+    </div>
   </div>
 
   <div class="col-lg-9">
@@ -22,5 +35,7 @@
 	
       </fieldset>
     </form>
+
+    {{> comments }}
   </div>
 </template>

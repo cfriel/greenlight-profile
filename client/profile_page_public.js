@@ -1,3 +1,21 @@
+Template.profile_page_public.sites = function()
+{
+    //todo
+    return 0;
+}
+
+Template.profile_page_public.followers = function()
+{
+    // todo
+    return 0;
+}
+
+Template.profile_page_public.following = function()
+{
+    // todo
+    return 0;
+}
+
 Template.profile_page_public.username = function()
 {
     var username = Session.get("profile_username");

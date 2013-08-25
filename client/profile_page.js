@@ -58,7 +58,7 @@ Template.profile_page.following = function()
 
 Template.profile_page.activities = function()
 {
-    return Greenlight.Activities.find();
+    return Greenlight.Activities.find({ owner: Meteor.userId()});
 }
 
 Template.profile_page.rendered = function()

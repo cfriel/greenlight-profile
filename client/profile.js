@@ -20,6 +20,13 @@ profile.prototype.routes =   {
 
 	Session.set("profile_username", username);
 
+	var curr = Meteor.user() ? Meteor.user().username : null;
+
+	if(username == curr)
+	{
+	    return 'profile_page';
+	}
+
 	return 'profile_page_public';
     }
 
